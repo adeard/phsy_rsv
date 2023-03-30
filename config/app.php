@@ -177,6 +177,7 @@ return [
 
         App\Providers\CityRepoServiceProvider::class,
         App\Providers\UserRepoServiceProvider::class,
+        App\Providers\ContactTypeRepoServiceProvider::class,
         App\Providers\BookingListRepoServiceProvider::class,
 
     ],
