@@ -27,4 +27,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'UserController@update')->name('put.user');
         Route::delete('{id}', 'UserController@destroy')->name('del.user');
     });
+
+    Route::prefix('booking-lists')->group(function () {
+        Route::get('', 'BookingListController@index')->name('get.booking-lists');
+        Route::post('', 'BookingListController@store')->name('add.booking-list');
+        Route::get('{id}', 'BookingListController@show')->name('get.booking-list');
+        Route::post('{id}', 'BookingListController@update')->name('put.booking-list');
+        Route::delete('{id}', 'BookingListController@destroy')->name('del.booking-list');
+    });
 });
