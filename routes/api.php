@@ -59,4 +59,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'LocationController@update')->name('put.location');
         Route::delete('{id}', 'LocationController@destroy')->name('del.location');
     });
+
+    Route::prefix('medical-records')->group(function () {
+        Route::get('', 'MedicalRecordController@index')->name('get.medical-records');
+        Route::post('', 'MedicalRecordController@store')->name('add.medical-record');
+        Route::get('{id}', 'MedicalRecordController@show')->name('get.medical-record');
+        Route::post('{id}', 'MedicalRecordController@update')->name('put.medical-record');
+        Route::delete('{id}', 'MedicalRecordController@destroy')->name('del.medical-record');
+    });
 });

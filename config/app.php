@@ -180,6 +180,7 @@ return [
         App\Providers\LocationRepoServiceProvider::class,
         App\Providers\ContactTypeRepoServiceProvider::class,
         App\Providers\BookingListRepoServiceProvider::class,
+        App\Providers\MedicalRecordRepoServiceProvider::class,
 
     ],
 
