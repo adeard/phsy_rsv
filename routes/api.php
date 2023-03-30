@@ -51,4 +51,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'ContactTypeController@update')->name('put.contact-type');
         Route::delete('{id}', 'ContactTypeController@destroy')->name('del.contact-type');
     });
+
+    Route::prefix('locations')->group(function () {
+        Route::get('', 'LocationController@index')->name('get.locations');
+        Route::post('', 'LocationController@store')->name('add.location');
+        Route::get('{id}', 'LocationController@show')->name('get.location');
+        Route::post('{id}', 'LocationController@update')->name('put.location');
+        Route::delete('{id}', 'LocationController@destroy')->name('del.location');
+    });
 });
