@@ -83,4 +83,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'PaymentHistoryController@update')->name('put.payment-history');
         Route::delete('{id}', 'PaymentHistoryController@destroy')->name('del.payment-history');
     });
+
+    Route::prefix('payments')->group(function () {
+        Route::get('', 'PaymentController@index')->name('get.payments');
+        Route::post('', 'PaymentController@store')->name('add.payment');
+        Route::get('{id}', 'PaymentController@show')->name('get.payment');
+        Route::post('{id}', 'PaymentController@update')->name('put.payment');
+        Route::delete('{id}', 'PaymentController@destroy')->name('del.payment');
+    });
 });
