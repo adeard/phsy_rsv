@@ -91,4 +91,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'PaymentController@update')->name('put.payment');
         Route::delete('{id}', 'PaymentController@destroy')->name('del.payment');
     });
+
+    Route::prefix('provinces')->group(function () {
+        Route::get('', 'ProvinceController@index')->name('get.provinces');
+        Route::post('', 'ProvinceController@store')->name('add.province');
+        Route::get('{id}', 'ProvinceController@show')->name('get.province');
+        Route::post('{id}', 'ProvinceController@update')->name('put.province');
+        Route::delete('{id}', 'ProvinceController@destroy')->name('del.province');
+    });
 });
