@@ -107,4 +107,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'RateController@update')->name('put.rate');
         Route::delete('{id}', 'RateController@destroy')->name('del.rate');
     });
+
+    Route::prefix('user-contacts')->group(function () {
+        Route::get('', 'UserContactController@index')->name('get.user-contacts');
+        Route::post('', 'UserContactController@store')->name('add.user-contact');
+        Route::get('{id}', 'UserContactController@show')->name('get.user-contact');
+        Route::post('{id}', 'UserContactController@update')->name('put.user-contact');
+        Route::delete('{id}', 'UserContactController@destroy')->name('del.user-contact');
+    });
 });
