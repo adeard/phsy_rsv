@@ -115,4 +115,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'UserContactController@update')->name('put.user-contact');
         Route::delete('{id}', 'UserContactController@destroy')->name('del.user-contact');
     });
+
+    Route::prefix('user-levels')->group(function () {
+        Route::get('', 'UserLevelController@index')->name('get.user-levels');
+        Route::post('', 'UserLevelController@store')->name('add.user-level');
+        Route::get('{id}', 'UserLevelController@show')->name('get.user-level');
+        Route::post('{id}', 'UserLevelController@update')->name('put.user-level');
+        Route::delete('{id}', 'UserLevelController@destroy')->name('del.user-level');
+    });
 });
