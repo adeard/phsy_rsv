@@ -99,4 +99,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'ProvinceController@update')->name('put.province');
         Route::delete('{id}', 'ProvinceController@destroy')->name('del.province');
     });
+
+    Route::prefix('rates')->group(function () {
+        Route::get('', 'RateController@index')->name('get.rates');
+        Route::post('', 'RateController@store')->name('add.rate');
+        Route::get('{id}', 'RateController@show')->name('get.rate');
+        Route::post('{id}', 'RateController@update')->name('put.rate');
+        Route::delete('{id}', 'RateController@destroy')->name('del.rate');
+    });
 });

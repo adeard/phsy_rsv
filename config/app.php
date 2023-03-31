@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        App\Providers\RateRepoServiceProvider::class,
         App\Providers\CityRepoServiceProvider::class,
         App\Providers\UserRepoServiceProvider::class,
         App\Providers\PaymentRepoServiceProvider::class,
