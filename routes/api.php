@@ -75,4 +75,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'PatientController@update')->name('put.patient');
         Route::delete('{id}', 'PatientController@destroy')->name('del.patient');
     });
+
+    Route::prefix('payment-histories')->group(function () {
+        Route::get('', 'PaymentHistoryController@index')->name('get.payment-histories');
+        Route::post('', 'PaymentHistoryController@store')->name('add.payment-history');
+        Route::get('{id}', 'PaymentHistoryController@show')->name('get.payment-history');
+        Route::post('{id}', 'PaymentHistoryController@update')->name('put.payment-history');
+        Route::delete('{id}', 'PaymentHistoryController@destroy')->name('del.payment-history');
+    });
 });
