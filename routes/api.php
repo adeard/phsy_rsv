@@ -139,4 +139,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'UserTypeSpecialistController@update')->name('put.user-type-specialist');
         Route::delete('{id}', 'UserTypeSpecialistController@destroy')->name('del.user-type-specialist');
     });
+
+    Route::prefix('user-types')->group(function () {
+        Route::get('', 'UserTypeController@index')->name('get.user-types');
+        Route::post('', 'UserTypeController@store')->name('add.user-type');
+        Route::get('{id}', 'UserTypeController@show')->name('get.user-type');
+        Route::post('{id}', 'UserTypeController@update')->name('put.user-type');
+        Route::delete('{id}', 'UserTypeController@destroy')->name('del.user-type');
+    });
 });

@@ -182,6 +182,7 @@ return [
         App\Providers\PatientRepoServiceProvider::class,
         App\Providers\ProvinceRepoServiceProvider::class,
         App\Providers\LocationRepoServiceProvider::class,
+        App\Providers\UserTypeRepoServiceProvider::class,
         App\Providers\UserLevelRepoServiceProvider::class,
         App\Providers\UserContactRepoServiceProvider::class,
         App\Providers\ContactTypeRepoServiceProvider::class,
