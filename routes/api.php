@@ -123,4 +123,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'UserLevelController@update')->name('put.user-level');
         Route::delete('{id}', 'UserLevelController@destroy')->name('del.user-level');
     });
+
+    Route::prefix('user-specialists')->group(function () {
+        Route::get('', 'UserSpecialistController@index')->name('get.user-specialists');
+        Route::post('', 'UserSpecialistController@store')->name('add.user-specialist');
+        Route::get('{id}', 'UserSpecialistController@show')->name('get.user-specialist');
+        Route::post('{id}', 'UserSpecialistController@update')->name('put.user-specialist');
+        Route::delete('{id}', 'UserSpecialistController@destroy')->name('del.user-specialist');
+    });
 });

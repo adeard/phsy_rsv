@@ -188,7 +188,7 @@ return [
         App\Providers\BookingListRepoServiceProvider::class,
         App\Providers\MedicalRecordRepoServiceProvider::class,
         App\Providers\PaymentHistoryRepoServiceProvider::class,
-
+        App\Providers\UserSpecialistRepoServiceProvider::class,
     ],
 
     /*
