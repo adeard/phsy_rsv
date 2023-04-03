@@ -131,4 +131,12 @@ Route::middleware('auth:api')->group(function () {
         Route::post('{id}', 'UserSpecialistController@update')->name('put.user-specialist');
         Route::delete('{id}', 'UserSpecialistController@destroy')->name('del.user-specialist');
     });
+
+    Route::prefix('user-type-specialists')->group(function () {
+        Route::get('', 'UserTypeSpecialistController@index')->name('get.user-type-specialists');
+        Route::post('', 'UserTypeSpecialistController@store')->name('add.user-type-specialist');
+        Route::get('{id}', 'UserTypeSpecialistController@show')->name('get.user-type-specialist');
+        Route::post('{id}', 'UserTypeSpecialistController@update')->name('put.user-type-specialist');
+        Route::delete('{id}', 'UserTypeSpecialistController@destroy')->name('del.user-type-specialist');
+    });
 });
